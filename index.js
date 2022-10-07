@@ -8,17 +8,13 @@ function currentTime() {
   let mm = date.getMinutes();
   let ss = date.getSeconds();
   
-  ampm = "AM";
-  if (hour >= 12) {
-      hour = hour - 12;
-      ampm = "PM";
-  }
+
   
   hh = (hh < 10) ? "0" + hh : hh;
    mm = (mm < 10) ? "0" + mm : mm;
    ss = (ss < 10) ? "0" + ss : ss;
     
-   let time = hh + ":" + mm + ":" + ss +" " + ampm;
+   let time = hh + ":" + mm + ":" + ss ;
 
  currTime.innerText = time; 
   let t = setTimeout(function(){
@@ -92,7 +88,6 @@ audio.loop = true;
 function ringing(time) {
   audio.play();
   
-  audio.play();
 }
 
 
