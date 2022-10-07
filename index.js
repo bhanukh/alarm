@@ -24,6 +24,7 @@ function currentTime() {
       }
     }, 1000);
 }
+
 currentTime();
 
 

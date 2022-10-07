@@ -99,8 +99,7 @@ li{
     .container{
         margin-top: 4rem;
         width: 100%;
-        border: none;
-        
+        border: none;  
     }
     .user-input{
         display: flex;
