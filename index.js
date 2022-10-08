@@ -26,6 +26,7 @@ function currentTime() {
 currentTime();
 
 
+
 // taking input from user for alarm
 let alarm_List = [];
 const userInput = document.querySelector(".user-input");
@@ -52,7 +53,7 @@ userInput.addEventListener("submit", function (e) {
         if (!alarm_List.includes(new_Alarm)) {
             alarm_List.push(new_Alarm);
             shownew_Alarm(new_Alarm);
-            addAlarm.reset();
+
         } else {
             alert(`Alarm for ${new_Alarm} already set.`);
         }
@@ -70,12 +71,16 @@ function formatTime(time) {
 const myList = document.querySelector(".set-alarms-list");
 
 function shownew_Alarm(new_Alarm) {
+    var al = (alarm_List.length == 0) ? "No Alarms Left" : "Alarms";
+    document.getElementById("alarms").innerText = al;
     const html = `
     <li class = "time-list">        
         <span class="time">${new_Alarm}</span>
         <button class="deleteAlarm time-control" id="delete-button" onclick = "remove(this.value)" value=${new_Alarm}>Delete Alarm</button>       
     </li>`;
     myList.innerHTML += html;
+
+
 }
 
 //audio for alarm
@@ -93,7 +98,6 @@ function ringing(time) {
 //stop the alram
 const clearAlarm = () => {
     audio.pause();
-    clearTimeout(alarmTimeout);
     alert("Alarm cleared");
 };
 
@@ -107,7 +111,9 @@ myList.addEventListener("click", (e) => {
 
 // this function for remove the alarm from list 
 const remove = (value) => {
+    audio.pause();
     let newList = alarm_List.filter((time) => time != value);
     alarm_List.length = 0; // Clear contents
+    alert("Are You  Want to delete this alarm");
     alarm_List.push.apply(alarm_List, newList);
 };
