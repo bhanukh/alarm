@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <!-- body section -->
+
 <body>
 
     <!-- main-container -->
@@ -23,27 +24,30 @@
         <!-- currenttime -->
         <div id="current-time">
         </div>
+        <!-- horizontal line -->
         <hr />
 
         <h3>Set Your Alarm</h3>
-          <!-- input from user -->
+        <!-- input from user -->
         <form class="user-input">
-
-            <input type="number" id="hour" max="23" min="00" placeholder="hrs">
+            <input type="number" id="hour" max="12" min="00" placeholder="hrs">
             <input type="number" id="min" max="59" min="00" placeholder="min">
             <input type="number" id="sec" max="59" min="00" placeholder="sec">
-
+            <select name="AM/PM" id="ampm">
+                <option value="AM" selected>AM</option>
+                <option value="PM">PM</option>
+            </select>
+            
             <!-- set alarm buttn -->
             <button type="submit" id="set">Set </button>
             <!-- stop alarm buttn -->
             <button type="reset" id="stop" onclick="clearAlarm()">Stop </button>
-
         </form>
 
 
         <h2 id="alarms">No Alarm Set</h2>
         <ul class="set-alarms-list">
-            
+
             <li></li>
         </ul>
     </div>
