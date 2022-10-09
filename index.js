@@ -108,9 +108,13 @@ audio.loop = true;
 // RINGS THE AUDIO  AT THE CORRECT TIME 
 function ringing(time) {
     audio.play();
-    alert("Alarm Ringing...")
+    
+    setTimeout(() => {
+        alert("Alarm Ringing...")
+      }, 1000)
     audio.play();
 }
+
 
 
 //stop the alram
