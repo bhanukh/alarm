@@ -76,7 +76,7 @@ function shownew_Alarm(new_Alarm) {
     const html = `
     <li class = "time-list">        
         <span class="time">${new_Alarm}</span>
-        <button class="deleteAlarm time-control" id="delete-button" onclick = "remove(this.value)" value=${new_Alarm}>Delete Alarm</button>       
+        <button class="deleteAlarm time-control" id="delete-button" onclick = "remove(this.value)" value=${new_Alarm}>Delete</button>       
     </li>`;
     myList.innerHTML += html;
 
