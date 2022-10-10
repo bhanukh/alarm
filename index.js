@@ -138,7 +138,7 @@ const remove = (value) => {
     alarm_List.length = 0; // Clear contents
     alert("Are You  Want to delete this alarm");
     alarm_List.push.apply(alarm_List, newList);
-    if(alarm_List.length==0){
+    if(alarm_List.length==1){
         document.getElementById("alarms").innerText = "No Alarm set";
     }
 };
