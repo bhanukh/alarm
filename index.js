@@ -131,6 +131,7 @@ myList.addEventListener("click", (e) => {
     }
 });
 
+
 // this function for remove the alarm from list 
 const remove = (value) => {
     audio.pause();
